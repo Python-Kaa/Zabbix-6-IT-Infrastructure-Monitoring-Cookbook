@@ -1,109 +1,111 @@
-# Preface
+# Предисловие
 
-Welcome to *Zabbix 6 IT Infrastructure Monitoring Cookbook*. IT infrastructure ranges from Windows and Linux to networking and development, and basically anything that runs on computer hardware. In this book, we will go over various topics useful to anyone in IT that wants to use Zabbix to monitor their IT infrastructure.
+Добро пожаловать в *Книгу рецептов по мониторингу ИТ-инфраструктуры Zabbix 6*. IT-инфраструктура начиная с Windows и Linux до сетей и разработки, и вообще всё, что может запуститься на компьютерном железе. В этой книге мы рассмотрим различные темы, полезные для тех, кто хочет использовать Zabbix для мониторинга ИТ-инфраструктуры.
 
-**Who this book is for**
+**Для кого эта книга**
 
-Monitoring systems are often overlooked within IT organizations, but they can provide an overview that will save you time, money, and headaches. This book is for IT engineers that want to learn about Zabbix 6 and how to use it to bring their IT environments to the next level.
+Системам мониторинга часто не уделяют должного внимания в ИТ-организациях, но они могут обеспечить присмотр, который сэкономит ваше время, деньги и головную боль. Эта книга предназначена для ИТ-инженеров, которые хотят узнать о Zabbix 6 и о том, как с его помощью вывести свою ИТ-среду на новый уровень.
 
-**What this book covers**
+**Что включает в себя эта книга**
 
-*Chapter 1*, *Installing Zabbix and Getting Started Using the Frontend*, covers how to set up Zabbix, optionally with HA. We will also work our way through the Zabbix frontend.
+*Глава  1*, *Установка Zabbix и начало работы с фронтендом*, рассказывает о том, как установить Zabbix, в том числе с помощью HA. Мы также рассмотрим фронтенд Zabbix.
 
-*Chapter 2*, *Getting Things Ready with Zabbix User Management*, covers how to set up your first users, user groups, and user roles.
+*Глава 2*, *Подготовка к работе с управлением пользователями Zabbix*, рассказывает о том, как настроить первых пользователей, группы пользователей и роли пользователей.
 
-*Chapter 3*, *Setting Up Zabbix Monitoring*, covers how to set up almost any type of monitoring within Zabbix.
+*Глава 3*, *Настройка мониторинга Zabbix*, рассказывает о том, как настроить практически любой тип мониторинга в Zabbix.
 
-*Chapter 4*, *Working with Triggers and Alerts*, covers how to set up triggers and get alerts from them.
+*Глава 4*, *Работа с триггерами и оповещениями*, рассказывает о том, как настраивать триггеры и получать с их помощью оповещения.
 
-*Chapter 5*, *Building Your Own Structured Templates*, covers how to build templates that are structured, which will work wonders for keeping your Zabbix setup organized.
+*Глава 5*, *Создание собственных шаблонов*, рассказывает о том, как создавать шаблоны, которые призваны помочь вам поддерживать порядок в Zabbix.
 
-*Chapter 6*, *Visualizing Data, Inventory, and Reporting*, covers how to visualize data in graphs, maps, and dashboards. It also covers how to use the Zabbix inventory, reporting, and business service monitoring functionality.
+*Глава 6*, *Визуализация данных, инвентаризация и отчетность*, рассказывает о том, как визуализировать данные в виде графиков, карт и дашбордов. В ней также рассказывается о том, как использовать функции инвентаризации, отчетности и мониторинга бизнес-сервисов Zabbix.
 
-*Chapter 7*, *Using Discovery for Automatic Creation*, covers how to use Zabbix discovery for automatic host creation as well as items, triggers, and more with agents, SNMP, WMI, and JMX.
+*Глава 7*, *Автоматическое создание с помощью обнаружения*, рассказывает о том, как использовать обнаружение Zabbix для автоматического создания хостов, а также элементов, триггеров и многого другого с помощью агентов, SNMP, WMI и JMX.
 
-*Chapter 8*, *Setting Up Zabbix Proxies*, teaches you how to set up Zabbix proxies correctly for use in a production environment.
+*Глава 8*, *Установка прокси-серверов Zabbix*, учит правильно настраивать прокси-серверы Zabbix для использования в рабочей среде.
 
-*Chapter 9*, *Integrating Zabbix with External Services*, teaches you how to integrate Zabbix with external services for alerting.
+*Глава 9*, *Интеграция Zabbix с внешними службами*, учит вас интегрировать Zabbix с внешними службами для оповещения.
 
-*Chapter 10*, *Extending Zabbix Functionality with Custom Scripts and the Zabbix API*, covers how to extend Zabbix functionality by using custom scripts and the Zabbix API.
+*Глава 10*, *Расширение функциональности Zabbix с помощью пользовательских сценариев и Zabbix API*, рассказывает о том, как расширить функциональность Zabbix с помощью пользовательских сценариев и Zabbix API.
 
-*Chapter 11*, *Maintaining Your Zabbix Setup*, covers how to maintain a Zabbix setup and keep its performance up over time.
+*Глава 11*, *Обслуживание Zabbix*, рассказывает о том, как обслуживать установленный Zabbix и поддерживать го производительность в течение долгого времени.
 
-*Chapter 12*, *Advanced Zabbix Database Management*, teaches you how to manage Zabbix databases for an advanced setup.
+*Глава 12*, *Расширенное управление базами данных Zabbix*, учит вас управлять базами данных Zabbix с помощью расширенных настроек.
 
-*Chapter 13*, *Bringing Zabbix to the Cloud with Zabbix Cloud Integration*, covers how to use Zabbix in the cloud with services such as AWS, Azure, and Docker.
+*В главе 13*, *Перенос Zabbix в облако с Zabbix Cloud Integration*, рассказывается о том, как использовать Zabbix в облаке с помощью таких сервисов, как AWS, Azure и Docker.
 
-**To get the most out of this book**
+**Чтобы получить максимальную пользу от этой книги**.
 
-You should have a good basis in IT to understand the terminology used in this book. This book is best for people with at least a starting knowledge of monitoring systems, Linux, and network engineering.
+
+Чтобы понять терминологию, используемую в этой книге, вы должны иметь хорошую подготовку в области ИТ. Эта книга лучше всего подойдет людям, имеющим хотя бы начальные знания о системах мониторинга, Linux и сетях.
 
 ![img](file:///tmp/lu258424lw1ev.tmp/lu258424lw1f0_tmp_d707e2ccf7107b93.jpg) 
 
-Make sure you have a virtualization environment ready to create virtual machines for use with the recipes. VirtualBox, VMware, or any type of client/hypervisor will do.
+Убедитесь, что у вас есть среда виртуализации, готовая к созданию виртуальных машин для использования рецептов. Подойдет VirtualBox, VMware или любой другой клиент/гипервизор.
 
-Throughout the book, we will make use of VIM to edit files, so make sure to install it. If you do not feel comfortable using VIM, you can substitute the command for NANO or anything else you prefer.
+На протяжении всей книги мы будем использовать VIM для редактирования файлов, поэтому не забудьте установить его. Если вам неудобно использовать VIM, вы можете заменить эту команду на NANO или любую другую, которая вам больше нравится.
 
-**If you are using the digital version of this book, we advise you to type the code yourself or access the code from the book's GitHub repository (a link is available in the next section). Doing so will help you avoid any potential errors related to the copying and pasting of code.**
+**Если вы используете цифровую версию этой книги, мы советуем вам набрать код самостоятельно или получить доступ к коду из репозитория GitHub (ссылка доступна в следующем разделе). Это поможет вам избежать возможных ошибок, связанных с копированием и вставкой кода**.
 
-**Download the example code files**
+**Скачать файлы кода примеров**
 
-You can download the example code files for this book from GitHub at:
+Файлы кода примеров для этой книги можно загрузить с GitHub по адресу:
 
 [https://github.com/PacktPublishing/Zabbix-6-IT-Infrastructure-](https://github.com/PacktPublishing/Zabbix-6-IT-Infrastructure-Monitoring-Cookbook)[Monitoring-Cookbook](https://github.com/PacktPublishing/Zabbix-6-IT-Infrastructure-Monitoring-Cookbook)
 
-If there's an update to the code, it will be updated in the GitHub repository.
+Если код обновится, он будет обновлен и в репозитории GitHub.
 
-We also have other code bundles from our rich catalog of books and videos available at:
+У нас также есть другие наборы кода из нашего богатого каталога книг и видео, которые доступные по адресу:
 
 https://github.com/PacktPublishing/
 
-Check them out!
+Попробуйте их!
 
-**Download the color images**
+**Скачать цветные изображения**.
 
-We also provide a PDF file that has color images of the screenshots and diagrams used in this book. You can download it here:
+
+Мы также предоставляем PDF-файл с цветными изображениями скриншотов и диаграмм, используемых в этой книге. Вы можете скачать их здесь:
 
 [https://static.packt-cdn.com/downloads/9781803246918_](https://static.packt-cdn.com/downloads/9781803246918_ColorImages.pdf) [ColorImages.pdf](https://static.packt-cdn.com/downloads/9781803246918_ColorImages.pdf)
 
-**Conventions used**
+**Используемые обозначения**
 
-There are a number of text conventions used throughout this book.
+В этой книге используется ряд текстовых обозначений.
 
-Code in text: Indicates code words in text, database table names, folder names, filenames, file extensions, pathnames, dummy URLs, user input, and Twitter handles. Here is an example: "It's important to back up all of our Zabbix configuration data, which is located in the /etc/zabbix/ folder."
+Код в тексте: Обозначает кодовые слова в тексте, имена таблиц базы данных, имена папок, имена файлов, расширения файлов, имена путей, фиктивные URL-адреса, пользовательский ввод и вызовы Twitter. Вот пример: "Важно создать резервную копию всех наших конфигурационных данных Zabbix, которые находятся в папке /etc/zabbix/".
 
-A block of code is set as follows:
+Блок кода задается следующим образом:
 
-1. MariaDB Server
+1. Сервер MariaDB
 
-1. ​	To use a different major version of the server, or to pin to a specific minor version, change URI below.
+1. ​	Чтобы использовать другую мажорную версию сервера или привязаться к определенной минорной версии, измените URI ниже.
 
-deb [arch=amd64] http://downloads.mariadb.com/MariaDB/ mariadb-10.5/repo/ubuntu xenial main
+deb [arch=amd64] http://downloads.mariadb.com/MariaDB/mariadb-10.5/repo/ubuntu xenial main
 
-Any command-line input or output is written as follows:
+Любой ввод или вывод командной строки записывается следующим образом:
 
 **systemctl start mariadb**
 
-**Bold**: Indicates a new term, an important word, or words that you see onscreen. For instance, words in menus or dialog boxes appear in **bold**. Here is an example: "Then we navigate to **Monitoring** | **Hosts** and click on **Latest data** for the Zabbix server host."
+**Жирный**: Указывает на новый термин, важное слово или слова, которые вы видите на экране. Например, слова в меню или диалоговых окнах выделяются **жирным**. Вот пример: "Затем мы переходим в раздел **Мониторинг** | **Хосты** и нажимаем на **Последние данные** для хоста сервера Zabbix".
 
-**Tips or Important Notes**
+**Советы или важные замечания**.
 
-Appear like this.
+Выглядят следующим образом.
 
-**Get in touch**
+**Подробнее**
 
-Feedback from our readers is always welcome.
+Отзывы наших читателей всегда приветствуются.
 
-**General feedback**: If you have questions about any aspect of this book, email us at [customercare@packtpub.com](mailto:customercare@packtpub.com)[ ](mailto:customercare@packtpub.com)and mention the book title in the subject of your message.
+**Основной канал**: Если у вас есть вопросы по любому аспекту этой книги, напишите нам по адресу [customercare@packtpub.com](mailto:customercare@packtpub.com)[ ](mailto:customercare@packtpub.com) и укажите название книги в теме сообщения.
 
-**Errata**: Although we have taken every care to ensure the accuracy of our content, mistakes do happen. If you have found a mistake in this book, we would be grateful if you would report this to us. Please visit [www.packtpub.com/support/errata](http://www.packtpub.com/support/errata)[ ](http://www.packtpub.com/support/errata)and fill in the form.
+**Ошибки**: Несмотря на то, что мы сделали все возможное, чтобы обеспечить точность наших материалов, ошибки все же случаются. Если вы нашли ошибку в этой книге, мы будем благодарны, если вы сообщите нам об этом. Пожалуйста, посетите страницу [www.packtpub.com/support/errata](http://www.packtpub.com/support/errata)[ ](http://www.packtpub.com/support/errata) и заполните форму.
 
-**Piracy**: If you come across any illegal copies of our works in any form on the internet, we would be grateful if you would provide us with the location address or website name. Please contact us at [copyright@packt.com](mailto:copyright@packt.com)[ ](mailto:copyright@packt.com)with a link to the material.
+**Пиратство**: Если вы обнаружите в интернете нелегальные копии наших произведений в любой форме, мы будем благодарны, если вы сообщите нам адрес или название сайта. Пожалуйста, свяжитесь с нами по адресу [copyright@packt.com](mailto:copyright@packt.com)[ ](mailto:copyright@packt.com) со ссылкой на материал.
 
-**If you are interested in becoming an author**: If there is a topic that you have expertise in and you are interested in either writing or contributing to a book, please visit [authors.](http://authors.packtpub.com/) [packtpub.com](http://authors.packtpub.com/).
+**Если вы заинтересованы в том, чтобы стать автором**: Если у вас есть тема, в которой вы разбираетесь, и вы заинтересованы в написании или участии в создании книги, пожалуйста, посетите [authors.](http://authors.packtpub.com/) [packtpub.com](http://authors.packtpub.com/).
 
-**Share Your Thoughts**
+**Поделитесь своими мыслями**
 
-Once you've read *Zabbix 6 IT Infrastructure Monitoring Cookbook - Second Edition*, we'd love to hear your thoughts! Please [click here to go straight to the](https://packt.link/r/180324691X) [Amazon review page](https://packt.link/r/180324691X)[ ](https://packt.link/r/180324691X)for this book and share your feedback.
+После прочтения *Книги рецептов по мониторингу ИТ-инфраструктуры Zabbix 6 - Вторая редакция* мы будем рады выслушать ваши мнения! Пожалуйста, [click here to go straight to the](https://packt.link/r/180324691X) [Amazon review page](https://packt.link/r/180324691X)[ ](https://packt.link/r/180324691X) для этой книги и поделитесь своим отзывом.
 
-Your review is important to us and the tech community and will help us make sure we're delivering excellent quality content.
+Ваш отзыв важен для нас и технологического сообщества и поможет нам убедиться в том, что мы предоставляем контент отличного качества.
